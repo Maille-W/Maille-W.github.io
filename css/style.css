@@ -1,0 +1,18 @@
+body {
+  background-color: #ffc6f2;
+}
+.head {
+  text-align: center;
+  background-color: #fff;
+  border: 2px, solid, #f9a7e6;
+  border-radius: 30px;
+  color: #f588dc;
+  font-weight: 400;
+  padding: 15px;
+  margin: 25px 0;
+  transition: 0.5s;
+  position: relative;
+}
+.pop {
+  padding-left: 30px;
+}
