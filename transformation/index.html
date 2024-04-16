@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transformation with JS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="pacifico-regular">
+        <h1>Maille's Mood Changes with the Weather</h1>
+      </div>
+      <div class="button">
+        <p onclick="season()">Click here to <br />change the weather</p>
+      </div>
+    </header>
+    <div id="summer">
+      <img class="seasonimage" src="./sumergif.gif" alt="" />
+      <p class="para">
+        SUNNY
+        <br />
+        When the weather is sunny and warm, my mood is always light, happy, and
+        smiley.
+      </p>
+    </div>
+    <div id="winter" style="display: none">
+      <img class="seasonimage" src="./pixil-gif-drawing.gif" alt="" />
+      <p class="para">
+        CLOUDY AND RAINY
+        <br />
+        When the weather is cloudy and rainy, my mood is always tired, sad, and
+        unmotivated.
+      </p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
