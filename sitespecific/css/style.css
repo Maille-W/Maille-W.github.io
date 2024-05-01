@@ -11,12 +11,12 @@ button {
 }
 .box {
   text-align: center;
-  width: 30%;
+  width: 100%;
   margin: 0.5%;
   min-height: 300px;
   padding: 10px;
   /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); */
 }
 .box img {
-  width: 60%;
+  width: 100%;
 }
