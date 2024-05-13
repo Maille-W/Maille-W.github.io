@@ -1,0 +1,58 @@
+
+
+{
+  "message": "success",
+  "people": [
+    {
+      "name": "Jasmin Moghbeli",
+      "craft": "ISS",
+      "spacecraft": "SpaceX Crew Dragon spacecraft",
+      "age": 40,
+      "gender": "female"
+    },
+    {
+      "name": "Andreas Mogensen",
+      "craft": "ISS",
+      "spacecraft": "the Dragon vehicle",
+      "age": 47,
+      "gender": "male"
+    },
+    {
+      "name": "Satoshi Furukawa",
+      "craft": "ISS",
+      "spacecraft": "Soyuz TMA-02M",
+      "age": 60,
+      "gender": "male"
+    },
+    {
+      "name": "Konstantin Borisov",
+      "craft": "ISS",
+      "spacecraft": "SpaceX Dragon spacecraft",
+      "age": 39,
+      "gender": "male"
+    },
+    {
+      "name": "Oleg Kononenko",
+      "craft": "ISS",
+      "spacecraft": "Soyuz TMA-12",
+      "age": 59,
+      "gender": "male"
+    },
+    {
+      "name": "Nikolai Chub",
+      "craft": "ISS",
+      "spacecraft": "Soyuz 2.1a | Soyuz MS-24.",
+      "age": 39,
+      "gender": "male"
+    },
+    {
+      "name": "Loral O'Hara",
+      "craft": "ISS",
+      "spacecraft": "Soyuz MS-24 spacecraft",
+      "age": 41,
+      "gender": "female"
+    }
+  ],
+  "number": 7
+}
+

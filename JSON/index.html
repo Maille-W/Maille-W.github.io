@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Working With JSON Data</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="background_image">
+      <div class="text">
+        <h1>
+          Individuals Currently in Space
+          <span style="font-size: 60px"> &#128125;</span>
+        </h1>
+        <h3>
+          # of Astronauts Currently in Space:
+          <p id="personcount"></p>
+        </h3>
+        <h3>List of their Names:</h3>
+        <data class="people link"></data>
+        <p id="zero"></p>
+        <p id="one"></p>
+        <p id="two"></p>
+        <p id="three"></p>
+        <p id="four"></p>
+        <p id="five"></p>
+        <p id="six"></p>
+      </div>
+    </div>
+    <div class="background_image">
+      <div class="container">
+        <div class="photo-gallery">
+          <div class="column">
+            <div class="photo">
+              <a
+                title="Bill Stafford
+          , Public domain, via Wikimedia Commons"
+                href="https://commons.wikimedia.org/wiki/File:Jasmin_Moghbeli_official_portrait.jpg"
+                ><img
+                  alt="Jasmin Moghbeli official portrait"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Jasmin_Moghbeli_official_portrait.jpg/256px-Jasmin_Moghbeli_official_portrait.jpg?20180918163555"
+              /></a>
+            </div>
+            <div class="photo">
+              <a
+                title="NASA, Public domain, via Wikimedia Commons"
+                href="https://commons.wikimedia.org/wiki/File:Andreas_Mogensen_official_portrait.jpg"
+                ><img
+                  alt="Andreas Mogensen official portrait"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Andreas_Mogensen_official_portrait.jpg/256px-Andreas_Mogensen_official_portrait.jpg?20220822154207"
+              /></a>
+            </div>
+            <div class="photo">
+              <a
+                title="NASA, Public domain, via Wikimedia Commons"
+                href="https://commons.wikimedia.org/wiki/File:Satoshi_Furukawa.jpg"
+                ><img
+                  alt="Satoshi Furukawa"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Satoshi_Furukawa.jpg/256px-Satoshi_Furukawa.jpg?20100904010757"
+              /></a>
+            </div>
+
+            <div class="column">
+              <div class="photo">
+                <a
+                  title="NASA Kennedy Space Center / NASA/Kim Shiflett, Public domain, via Wikimedia Commons"
+                  href="https://commons.wikimedia.org/wiki/File:NASA%E2%80%99s_SpaceX_Crew-7_Live_Launch_Coverage_(KSC-20230826-PH-KLS01_0081).jpg"
+                  ><img
+                    alt="NASA’s SpaceX Crew-7 Live Launch Coverage (KSC-20230826-PH-KLS01 0081)"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/NASA%E2%80%99s_SpaceX_Crew-7_Live_Launch_Coverage_%28KSC-20230826-PH-KLS01_0081%29.jpg/256px-NASA%E2%80%99s_SpaceX_Crew-7_Live_Launch_Coverage_%28KSC-20230826-PH-KLS01_0081%29.jpg?20230827014220"
+                /></a>
+              </div>
+              <div class="photo">
+                <a
+                  title="NASA Johnson Space Center / NASA / Andrey Shelepin, Public domain, via Wikimedia Commons"
+                  href="https://commons.wikimedia.org/wiki/File:Oleg_Kononenko_Official_Portrait_(jsc2023e052791).jpg"
+                  ><img
+                    alt="Oleg Kononenko Official Portrait (jsc2023e052791)"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Oleg_Kononenko_Official_Portrait_%28jsc2023e052791%29.jpg/256px-Oleg_Kononenko_Official_Portrait_%28jsc2023e052791%29.jpg?20231102223654"
+                /></a>
+              </div>
+              <div class="photo">
+                <a
+                  title="NASA/Andrey Shelepin, Public domain, via Wikimedia Commons"
+                  href="https://commons.wikimedia.org/wiki/File:Roscosmos_cosmonaut_and_Expedition_70_Flight_Engineer_Nikolai_Chub.jpg"
+                  ><img
+                    alt="Roscosmos cosmonaut and Expedition 70 Flight Engineer Nikolai Chub"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Roscosmos_cosmonaut_and_Expedition_70_Flight_Engineer_Nikolai_Chub.jpg/256px-Roscosmos_cosmonaut_and_Expedition_70_Flight_Engineer_Nikolai_Chub.jpg?20231024180339"
+                /></a>
+              </div>
+              <div class="photo">
+                <a
+                  title="NASA Johnson Space Center / ROBERT MARKOWITZ  NASA-JSC, Public domain, via Wikimedia Commons"
+                  href="https://commons.wikimedia.org/wiki/File:Jsc2022e095887_alt.jpg"
+                  ><img
+                    alt="Jsc2022e095887 alt"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Jsc2022e095887_alt.jpg/256px-Jsc2022e095887_alt.jpg?20231014013538"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module">
+      let req = await fetch("http://api.open-notify.org/astros.json");
+      let data = await req.json();
+      console.log(data);
+
+      for (let i = 0; i < data.people.length; i += 1) {
+        console.log("Astronauts name is: " + data.people[i].name);
+      }
+      for (let i = 0; i < data.people.length; i += 1) {
+        console.log("Astronauts craft is: " + data.people[i].craft);
+      }
+
+      document.getElementById("zero").innerHTML = data.people[0].name;
+      document.getElementById("one").innerHTML = data.people[1].name;
+      document.getElementById("two").innerHTML = data.people[2].name;
+      document.getElementById("three").innerHTML = data.people[3].name;
+      document.getElementById("four").innerHTML = data.people[4].name;
+      document.getElementById("five").innerHTML = data.people[5].name;
+      document.getElementById("six").innerHTML = data.people[6].name;
+
+      let personcount = (document.getElementById("personcount").innerHTML =
+        data.people.length);
+    </script>
+  </body>
+</html>
